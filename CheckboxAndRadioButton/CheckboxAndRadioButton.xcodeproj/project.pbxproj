@@ -20,7 +20,6 @@
 		430F01861994D7190081DCCE /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 430F01841994D7190081DCCE /* InfoPlist.strings */; };
 		430F01881994D7190081DCCE /* CheckboxAndRadioButtonTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 430F01871994D7190081DCCE /* CheckboxAndRadioButtonTests.m */; };
 		430F01941994D88A0081DCCE /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 430F01921994D88A0081DCCE /* Localizable.strings */; };
-		43740E491994E7EC00F9A1DD /* UIViewController+FromNib.m in Sources */ = {isa = PBXBuildFile; fileRef = 43740E481994E7EC00F9A1DD /* UIViewController+FromNib.m */; };
 		43740E521994EA4600F9A1DD /* check_off.png in Resources */ = {isa = PBXBuildFile; fileRef = 43740E4A1994EA4600F9A1DD /* check_off.png */; };
 		43740E531994EA4600F9A1DD /* check_off@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 43740E4B1994EA4600F9A1DD /* check_off@2x.png */; };
 		43740E541994EA4600F9A1DD /* check_on.png in Resources */ = {isa = PBXBuildFile; fileRef = 43740E4C1994EA4600F9A1DD /* check_on.png */; };
@@ -65,8 +64,6 @@
 		430F01871994D7190081DCCE /* CheckboxAndRadioButtonTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CheckboxAndRadioButtonTests.m; sourceTree = "<group>"; };
 		430F01911994D74E0081DCCE /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		430F01931994D88A0081DCCE /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
-		43740E471994E7EC00F9A1DD /* UIViewController+FromNib.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIViewController+FromNib.h"; path = "../../../Essentials/UIViewController+FromNib.h"; sourceTree = "<group>"; };
-		43740E481994E7EC00F9A1DD /* UIViewController+FromNib.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIViewController+FromNib.m"; path = "../../../Essentials/UIViewController+FromNib.m"; sourceTree = "<group>"; };
 		43740E4A1994EA4600F9A1DD /* check_off.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = check_off.png; path = CheckboxAndRadioButton/Images/check_off.png; sourceTree = "<group>"; };
 		43740E4B1994EA4600F9A1DD /* check_off@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "check_off@2x.png"; path = "CheckboxAndRadioButton/Images/check_off@2x.png"; sourceTree = "<group>"; };
 		43740E4C1994EA4600F9A1DD /* check_on.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = check_on.png; path = CheckboxAndRadioButton/Images/check_on.png; sourceTree = "<group>"; };
@@ -156,7 +153,6 @@
 				43740E5F1994EB1500F9A1DD /* RadioButton.m */,
 				43740E5C1994EB1500F9A1DD /* OnOffButton.h */,
 				43740E5D1994EB1500F9A1DD /* OnOffButton.m */,
-				43910BE41994E4D00077E3DF /* Externals */,
 				430F01691994D7190081DCCE /* Supporting Files */,
 			);
 			path = CheckboxAndRadioButton;
@@ -206,15 +202,6 @@
 				43740E511994EA4600F9A1DD /* radio_on@2x.png */,
 			);
 			name = Images;
-			sourceTree = "<group>";
-		};
-		43910BE41994E4D00077E3DF /* Externals */ = {
-			isa = PBXGroup;
-			children = (
-				43740E471994E7EC00F9A1DD /* UIViewController+FromNib.h */,
-				43740E481994E7EC00F9A1DD /* UIViewController+FromNib.m */,
-			);
-			name = Externals;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -326,7 +313,6 @@
 				43740E611994EB1500F9A1DD /* OnOffButton.m in Sources */,
 				43910BDF1994DFEB0077E3DF /* CheckboxAndRadioButtonViewController.m in Sources */,
 				430F01731994D7190081DCCE /* AppDelegate.m in Sources */,
-				43740E491994E7EC00F9A1DD /* UIViewController+FromNib.m in Sources */,
 				43740E601994EB1500F9A1DD /* Checkbox.m in Sources */,
 				430F016F1994D7190081DCCE /* main.m in Sources */,
 				43740E621994EB1500F9A1DD /* RadioButton.m in Sources */,
@@ -399,6 +385,7 @@
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
+				FRAMEWORK_SEARCH_PATHS = "";
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_OPTIMIZATION_LEVEL = 0;
@@ -413,6 +400,11 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(SRCROOT)/../../Essentials",
+					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
+				);
 				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -438,6 +430,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = YES;
 				ENABLE_NS_ASSERTIONS = NO;
+				FRAMEWORK_SEARCH_PATHS = "";
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
@@ -445,6 +438,11 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(SRCROOT)/../../Essentials",
+					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
+				);
 				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
