@@ -33,6 +33,7 @@
 		43740E621994EB1500F9A1DD /* RadioButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 43740E5F1994EB1500F9A1DD /* RadioButton.m */; };
 		43910BDF1994DFEB0077E3DF /* CheckboxAndRadioButtonViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 43910BDD1994DFEB0077E3DF /* CheckboxAndRadioButtonViewController.m */; };
 		43910BE01994DFEB0077E3DF /* CheckboxAndRadioButtonViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 43910BDE1994DFEB0077E3DF /* CheckboxAndRadioButtonViewController.xib */; };
+		43CC61781997E4DC00E022CB /* UIViewController+FromNib.m in Sources */ = {isa = PBXBuildFile; fileRef = 43CC61771997E4DC00E022CB /* UIViewController+FromNib.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -82,6 +83,8 @@
 		43910BDC1994DFEB0077E3DF /* CheckboxAndRadioButtonViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CheckboxAndRadioButtonViewController.h; path = Sources/CheckboxAndRadioButtonViewController.h; sourceTree = "<group>"; };
 		43910BDD1994DFEB0077E3DF /* CheckboxAndRadioButtonViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CheckboxAndRadioButtonViewController.m; path = Sources/CheckboxAndRadioButtonViewController.m; sourceTree = "<group>"; };
 		43910BDE1994DFEB0077E3DF /* CheckboxAndRadioButtonViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = CheckboxAndRadioButtonViewController.xib; path = Sources/CheckboxAndRadioButtonViewController.xib; sourceTree = "<group>"; };
+		43CC61761997E4DC00E022CB /* UIViewController+FromNib.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIViewController+FromNib.h"; path = "../../../Essentials/UIViewController+FromNib.h"; sourceTree = "<group>"; };
+		43CC61771997E4DC00E022CB /* UIViewController+FromNib.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIViewController+FromNib.m"; path = "../../../Essentials/UIViewController+FromNib.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -153,6 +156,7 @@
 				43740E5F1994EB1500F9A1DD /* RadioButton.m */,
 				43740E5C1994EB1500F9A1DD /* OnOffButton.h */,
 				43740E5D1994EB1500F9A1DD /* OnOffButton.m */,
+				43CC61751997E4B800E022CB /* Exterals */,
 				430F01691994D7190081DCCE /* Supporting Files */,
 			);
 			path = CheckboxAndRadioButton;
@@ -202,6 +206,15 @@
 				43740E511994EA4600F9A1DD /* radio_on@2x.png */,
 			);
 			name = Images;
+			sourceTree = "<group>";
+		};
+		43CC61751997E4B800E022CB /* Exterals */ = {
+			isa = PBXGroup;
+			children = (
+				43CC61761997E4DC00E022CB /* UIViewController+FromNib.h */,
+				43CC61771997E4DC00E022CB /* UIViewController+FromNib.m */,
+			);
+			name = Exterals;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -311,6 +324,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				43740E611994EB1500F9A1DD /* OnOffButton.m in Sources */,
+				43CC61781997E4DC00E022CB /* UIViewController+FromNib.m in Sources */,
 				43910BDF1994DFEB0077E3DF /* CheckboxAndRadioButtonViewController.m in Sources */,
 				430F01731994D7190081DCCE /* AppDelegate.m in Sources */,
 				43740E601994EB1500F9A1DD /* Checkbox.m in Sources */,
@@ -402,7 +416,6 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
-					"$(SRCROOT)/../../Essentials",
 					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
 				);
 				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
@@ -440,7 +453,6 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
-					"$(SRCROOT)/../../Essentials",
 					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
 				);
 				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
