@@ -9,6 +9,8 @@
                 <outlet property="checkbox1" destination="nuu-ys-bln" id="4oa-EX-MYD"/>
                 <outlet property="checkbox2" destination="F53-IS-GMz" id="KDb-xY-67j"/>
                 <outlet property="checkboxFrame" destination="05a-Xd-1Oi" id="R8C-gJ-P3x"/>
+                <outlet property="radioButtonFrame" destination="h7G-AD-WGc" id="NqQ-g6-6i7"/>
+                <outlet property="radioButtons" destination="h7G-AD-WGc" id="bBt-zH-LTE"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -18,15 +20,15 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <view contentMode="scaleToFill" id="Hu8-kE-G4h">
-                    <rect key="frame" x="20" y="89" width="280" height="100"/>
+                    <rect key="frame" x="20" y="89" width="280" height="98"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <subviews>
                         <view contentMode="scaleToFill" id="05a-Xd-1Oi">
-                            <rect key="frame" x="0.0" y="10" width="280" height="90"/>
+                            <rect key="frame" x="0.0" y="10" width="280" height="88"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <subviews>
                                 <view contentMode="scaleToFill" id="nuu-ys-bln" customClass="Checkbox">
-                                    <rect key="frame" x="10" y="13" width="200" height="27"/>
+                                    <rect key="frame" x="10" y="16" width="130" height="27"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     <subviews>
                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="Wiz-rG-27y">
@@ -51,7 +53,7 @@
                                     </connections>
                                 </view>
                                 <view contentMode="scaleToFill" id="F53-IS-GMz" customClass="Checkbox">
-                                    <rect key="frame" x="10" y="43" width="200" height="27"/>
+                                    <rect key="frame" x="10" y="53" width="130" height="27"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     <subviews>
                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="wuv-eh-ZJy">
@@ -89,6 +91,78 @@
                     </subviews>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                 </view>
+                <view contentMode="scaleToFill" id="jqH-6p-bDM">
+                    <rect key="frame" x="20" y="235" width="280" height="98"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <subviews>
+                        <view contentMode="scaleToFill" id="h7G-AD-WGc" customClass="RadioButtons">
+                            <rect key="frame" x="0.0" y="10" width="280" height="88"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <subviews>
+                                <view tag="1" contentMode="scaleToFill" id="zIs-aW-IUZ" customClass="RadioButton">
+                                    <rect key="frame" x="10" y="16" width="130" height="27"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <subviews>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="hNp-Ki-rAX">
+                                            <rect key="frame" x="0.0" y="0.0" width="27" height="27"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <state key="normal" backgroundImage="radio_off.png">
+                                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                            </state>
+                                            <state key="selected" backgroundImage="radio_on.png"/>
+                                        </button>
+                                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ラジオ１" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="NkI-eF-1VW">
+                                            <rect key="frame" x="30" y="3" width="95" height="21"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                    <connections>
+                                        <outlet property="onOffImage" destination="hNp-Ki-rAX" id="hMG-SY-uiX"/>
+                                        <outlet property="onOffTitle" destination="NkI-eF-1VW" id="gUi-QJ-TrN"/>
+                                    </connections>
+                                </view>
+                                <view tag="2" contentMode="scaleToFill" id="CpB-6Z-6m7" customClass="RadioButton">
+                                    <rect key="frame" x="10" y="53" width="130" height="27"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <subviews>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="TbF-uw-DYP">
+                                            <rect key="frame" x="0.0" y="0.0" width="27" height="27"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <state key="normal" backgroundImage="radio_off.png">
+                                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                            </state>
+                                            <state key="selected" backgroundImage="radio_on.png"/>
+                                        </button>
+                                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ラジオ２" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="50C-nX-QhH">
+                                            <rect key="frame" x="30" y="3" width="95" height="21"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                    <connections>
+                                        <outlet property="onOffImage" destination="TbF-uw-DYP" id="pB2-ph-HyQ"/>
+                                        <outlet property="onOffTitle" destination="50C-nX-QhH" id="lc4-0b-SkA"/>
+                                    </connections>
+                                </view>
+                            </subviews>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        </view>
+                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="RadioButton" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="GAF-n4-aKp">
+                            <rect key="frame" x="10" y="0.0" width="109" height="21"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                </view>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
             <simulatedStatusBarMetrics key="simulatedStatusBarMetrics"/>
@@ -99,5 +173,7 @@
     <resources>
         <image name="check_off.png" width="27" height="27"/>
         <image name="check_on.png" width="27" height="27"/>
+        <image name="radio_off.png" width="22" height="22"/>
+        <image name="radio_on.png" width="22" height="22"/>
     </resources>
 </document>

@@ -8,11 +8,20 @@
 
 #import "CheckboxAndRadioButtonViewController.h"
 #import "Checkbox.h"
+#import "RadioButton.h"
 
-@interface CheckboxAndRadioButtonViewController ()
+typedef NS_ENUM(NSInteger, RadioButtonId) {
+    RADIO_BUTTON_1 = 1,
+    RADIO_BUTTON_2 = 2,
+};
+
+@interface CheckboxAndRadioButtonViewController () <OnOffButtonDelegate>
 @property (weak, nonatomic) IBOutlet Checkbox* checkbox1;
 @property (weak, nonatomic) IBOutlet Checkbox* checkbox2;
 @property (weak, nonatomic) IBOutlet UIView* checkboxFrame;
+
+@property (weak, nonatomic) IBOutlet RadioButtons* radioButtons;
+@property (weak, nonatomic) IBOutlet UIView* radioButtonFrame;
 
 @end
 
@@ -24,12 +33,31 @@
     
     self.title = @"CheckboxAndRadioButton";
     
-    [self.checkbox1 setup:nil];
-    [self.checkbox2 setup:nil];
-    
     self.checkboxFrame.layer.borderColor = [[UIColor grayColor] CGColor];
     self.checkboxFrame.layer.borderWidth = 1;
     self.checkboxFrame.layer.cornerRadius = 6;
+    
+    [self.checkbox1 setup:nil];
+    [self.checkbox2 setup:nil];
+    
+    self.radioButtonFrame.layer.borderColor = [[UIColor grayColor] CGColor];
+    self.radioButtonFrame.layer.borderWidth = 1;
+    self.radioButtonFrame.layer.cornerRadius = 6;
+    
+    [self.radioButtons setup:self];
+    [self.radioButtons changeSelectedId:RADIO_BUTTON_1];
+}
+
+#pragma mark - OnOffButtonDelegate
+
+- (void)changedOnOffButton:(OnOffButton *)inOnButton
+{
+    switch (inOnButton.tag) {
+        case RADIO_BUTTON_1:
+            break;
+        case RADIO_BUTTON_2:
+            break;
+    }
 }
 
 @end
