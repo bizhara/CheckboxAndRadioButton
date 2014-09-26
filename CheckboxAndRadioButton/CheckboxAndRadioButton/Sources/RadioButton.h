@@ -22,7 +22,7 @@
 @property (assign, nonatomic) NSInteger selectedRadioButtonId;
 
 /// 初期化のため、使用前に必ず呼ぶこと
-- (void)setup:(void (^)(OnOffButton* inOnButton))inChangedOnOffButton;
+- (void)setup:(void (^)(OnOffButton* inOnButton))cbChangedOnOffButton;
 
 /// 選択ラジオボタンの変更
 - (void)changeSelectedId:(NSInteger)inSelectedId;

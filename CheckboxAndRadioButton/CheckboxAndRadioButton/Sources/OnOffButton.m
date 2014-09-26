@@ -62,9 +62,9 @@
 
 @implementation OnOffButton
 
-- (void)setup:(void (^)(OnOffButton *))inChangedOnOffButton
+- (void)setup:(void (^)(OnOffButton* inOnButton))cbChangedOnOffButton
 {
-    self.changedOnOffButton = inChangedOnOffButton;
+    self.changedOnOffButton = cbChangedOnOffButton;
     
     // このボタン全体として反応したいので、全体を囲むこのクラスに GestureRecognizer を付加する
     OnOffButtonGestureRecognizer* gestureRecognizer = [[OnOffButtonGestureRecognizer alloc] init];

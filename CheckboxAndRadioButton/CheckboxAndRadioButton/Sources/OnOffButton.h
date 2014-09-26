@@ -26,7 +26,7 @@
 @property (weak, nonatomic) IBOutlet UIImageView* auxImage; /// 付加的なイメージ（必要に応じて）
 
 /// 初期化用に必ず呼ぶこと
-- (void)setup:(void (^)(OnOffButton* inOnButton))inChangedOnOffButton;
+- (void)setup:(void (^)(OnOffButton* inOnButton))cbChangedOnOffButton;
 
 /// 選択状態の変更
 - (void)changeSelected:(BOOL)inSelected;
