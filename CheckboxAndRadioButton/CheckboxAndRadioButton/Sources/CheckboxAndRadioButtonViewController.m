@@ -31,7 +31,7 @@ typedef NS_ENUM(NSInteger, RadioButtonId) {
 {
     [super viewDidLoad];
     
-    self.title = @"CheckboxAndRadioButton";
+    self.title = @"Checkbox and RadioButton";
     
     self.checkboxFrame.layer.borderColor = [[UIColor grayColor] CGColor];
     self.checkboxFrame.layer.borderWidth = 1;
