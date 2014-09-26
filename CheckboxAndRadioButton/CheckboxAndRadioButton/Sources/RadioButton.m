@@ -42,11 +42,11 @@
 
 @implementation RadioButtons
 
-- (void)setup:(id<OnOffButtonDelegate>)inDelegate
+- (void)setup:(void (^)(OnOffButton *))inChangedOnOffButton
 {
     for (UIView* subView in self.subviews) {
         if ([subView isKindOfClass:[RadioButton class]]) {
-            [((RadioButton*)subView) setup:inDelegate];
+            [((RadioButton*)subView) setup:inChangedOnOffButton];
         }
     }
 }

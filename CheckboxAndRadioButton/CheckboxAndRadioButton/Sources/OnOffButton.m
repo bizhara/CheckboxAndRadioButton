@@ -56,15 +56,15 @@
 @interface OnOffButton ()
 @property (weak, nonatomic) IBOutlet UIButton* onOffImage;
 
-@property (assign, nonatomic) id<OnOffButtonDelegate> delegate;
+@property (copy, nonatomic) void (^changedOnOffButton)(OnOffButton* inOnButton);
 
 @end
 
 @implementation OnOffButton
 
-- (void)setup:(id<OnOffButtonDelegate>)inDelegate
+- (void)setup:(void (^)(OnOffButton *))inChangedOnOffButton
 {
-    self.delegate = inDelegate;
+    self.changedOnOffButton = inChangedOnOffButton;
     
     // このボタン全体として反応したいので、全体を囲むこのクラスに GestureRecognizer を付加する
     OnOffButtonGestureRecognizer* gestureRecognizer = [[OnOffButtonGestureRecognizer alloc] init];
@@ -101,7 +101,7 @@
     [self changeHighlightImage];
     
     // 選択状態に変化があったことを通知
-    [self.delegate changedOnOffButton:self];
+    if (self.changedOnOffButton) self.changedOnOffButton(self);
 }
 
 - (void)changeHighlighted:(BOOL)inHighlighted

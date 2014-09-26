@@ -15,7 +15,7 @@ typedef NS_ENUM(NSInteger, RadioButtonId) {
     RADIO_BUTTON_2 = 2,
 };
 
-@interface CheckboxAndRadioButtonViewController () <OnOffButtonDelegate>
+@interface CheckboxAndRadioButtonViewController ()
 @property (weak, nonatomic) IBOutlet Checkbox* checkbox1;
 @property (weak, nonatomic) IBOutlet Checkbox* checkbox2;
 @property (weak, nonatomic) IBOutlet UIView* checkboxFrame;
@@ -44,20 +44,16 @@ typedef NS_ENUM(NSInteger, RadioButtonId) {
     self.radioButtonFrame.layer.borderWidth = 1;
     self.radioButtonFrame.layer.cornerRadius = 6;
     
-    [self.radioButtons setup:self];
+    [self.radioButtons setup:^(OnOffButton *inOnButton) {
+        switch (inOnButton.tag) {
+            case RADIO_BUTTON_1:
+                break;
+            case RADIO_BUTTON_2:
+                break;
+        }
+    }];
+    
     [self.radioButtons changeSelectedId:RADIO_BUTTON_1];
-}
-
-#pragma mark - OnOffButtonDelegate
-
-- (void)changedOnOffButton:(OnOffButton *)inOnButton
-{
-    switch (inOnButton.tag) {
-        case RADIO_BUTTON_1:
-            break;
-        case RADIO_BUTTON_2:
-            break;
-    }
 }
 
 @end

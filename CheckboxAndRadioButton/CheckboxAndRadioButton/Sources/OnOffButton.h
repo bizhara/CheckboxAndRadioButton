@@ -8,16 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@class OnOffButton;
-
-@protocol OnOffButtonDelegate <NSObject>
-/** ボタン選択状態に変化があると呼び出される
- *  @param inOnButton    ON になったボタン
- */
-- (void)changedOnOffButton:(OnOffButton*)inOnButton;
-
-@end
-
 /** ラジオボタンやチェックボックスのように「イメージ＋文言」で表現され、On/Off の状態を持つものを制御する
  *
  *  ＊以下の構成を前提とする
@@ -36,7 +26,7 @@
 @property (weak, nonatomic) IBOutlet UIImageView* auxImage; /// 付加的なイメージ（必要に応じて）
 
 /// 初期化用に必ず呼ぶこと
-- (void)setup:(id<OnOffButtonDelegate>)inDelegate;
+- (void)setup:(void (^)(OnOffButton* inOnButton))inChangedOnOffButton;
 
 /// 選択状態の変更
 - (void)changeSelected:(BOOL)inSelected;
