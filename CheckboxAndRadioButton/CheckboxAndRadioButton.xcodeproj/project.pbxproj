@@ -20,6 +20,7 @@
 		430F01861994D7190081DCCE /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 430F01841994D7190081DCCE /* InfoPlist.strings */; };
 		430F01881994D7190081DCCE /* CheckboxAndRadioButtonTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 430F01871994D7190081DCCE /* CheckboxAndRadioButtonTests.m */; };
 		430F01941994D88A0081DCCE /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 430F01921994D88A0081DCCE /* Localizable.strings */; };
+		431507BC1A51CD7D000590F3 /* AlternativeChooser.m in Sources */ = {isa = PBXBuildFile; fileRef = 431507BB1A51CD7D000590F3 /* AlternativeChooser.m */; };
 		43740E521994EA4600F9A1DD /* check_off.png in Resources */ = {isa = PBXBuildFile; fileRef = 43740E4A1994EA4600F9A1DD /* check_off.png */; };
 		43740E531994EA4600F9A1DD /* check_off@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 43740E4B1994EA4600F9A1DD /* check_off@2x.png */; };
 		43740E541994EA4600F9A1DD /* check_on.png in Resources */ = {isa = PBXBuildFile; fileRef = 43740E4C1994EA4600F9A1DD /* check_on.png */; };
@@ -65,6 +66,8 @@
 		430F01871994D7190081DCCE /* CheckboxAndRadioButtonTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CheckboxAndRadioButtonTests.m; sourceTree = "<group>"; };
 		430F01911994D74E0081DCCE /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		430F01931994D88A0081DCCE /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		431507BA1A51CD7D000590F3 /* AlternativeChooser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AlternativeChooser.h; path = Sources/AlternativeChooser.h; sourceTree = "<group>"; };
+		431507BB1A51CD7D000590F3 /* AlternativeChooser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AlternativeChooser.m; path = Sources/AlternativeChooser.m; sourceTree = "<group>"; };
 		43740E4A1994EA4600F9A1DD /* check_off.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = check_off.png; path = CheckboxAndRadioButton/Images/check_off.png; sourceTree = "<group>"; };
 		43740E4B1994EA4600F9A1DD /* check_off@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "check_off@2x.png"; path = "CheckboxAndRadioButton/Images/check_off@2x.png"; sourceTree = "<group>"; };
 		43740E4C1994EA4600F9A1DD /* check_on.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = check_on.png; path = CheckboxAndRadioButton/Images/check_on.png; sourceTree = "<group>"; };
@@ -154,6 +157,8 @@
 				43740E5B1994EB1500F9A1DD /* Checkbox.m */,
 				43740E5E1994EB1500F9A1DD /* RadioButton.h */,
 				43740E5F1994EB1500F9A1DD /* RadioButton.m */,
+				431507BA1A51CD7D000590F3 /* AlternativeChooser.h */,
+				431507BB1A51CD7D000590F3 /* AlternativeChooser.m */,
 				43740E5C1994EB1500F9A1DD /* OnOffButton.h */,
 				43740E5D1994EB1500F9A1DD /* OnOffButton.m */,
 				43CC61751997E4B800E022CB /* Exterals */,
@@ -324,6 +329,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				43740E611994EB1500F9A1DD /* OnOffButton.m in Sources */,
+				431507BC1A51CD7D000590F3 /* AlternativeChooser.m in Sources */,
 				43CC61781997E4DC00E022CB /* UIViewController+FromNib.m in Sources */,
 				43910BDF1994DFEB0077E3DF /* CheckboxAndRadioButtonViewController.m in Sources */,
 				430F01731994D7190081DCCE /* AppDelegate.m in Sources */,
