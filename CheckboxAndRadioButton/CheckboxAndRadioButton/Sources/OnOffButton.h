@@ -21,12 +21,11 @@
 @property (weak, nonatomic) IBOutlet UIButton* onOffImage;
 @property (weak, nonatomic) IBOutlet UILabel* onOffTitle;
 
+@property (copy, nonatomic) void (^onChangedOnOffButton)(OnOffButton* inOnButton);
+
 @property (assign, nonatomic) BOOL selected;
 @property (assign, nonatomic) BOOL enabled;
 @property (assign, nonatomic) BOOL highlighted;
-
-/// 初期化用に必ず呼ぶこと
-- (void)setup:(void (^)(OnOffButton* inOnButton))cbChangedOnOffButton;
 
 /// 選択状態の変更
 - (void)changeSelected:(BOOL)inSelected;

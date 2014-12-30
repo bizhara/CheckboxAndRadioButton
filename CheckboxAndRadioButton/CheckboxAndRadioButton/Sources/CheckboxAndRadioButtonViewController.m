@@ -37,14 +37,11 @@ typedef NS_ENUM(NSInteger, RadioButtonId) {
     self.checkboxFrame.layer.borderWidth = 1;
     self.checkboxFrame.layer.cornerRadius = 6;
     
-    [self.checkbox1 setup:nil];
-    [self.checkbox2 setup:nil];
-    
     self.radioButtonFrame.layer.borderColor = [[UIColor grayColor] CGColor];
     self.radioButtonFrame.layer.borderWidth = 1;
     self.radioButtonFrame.layer.cornerRadius = 6;
     
-    [self.radioButtons setup:^(OnOffButton *inOnButton) {
+    [self.radioButtons setChangedOnOffButtonCallback:^(OnOffButton *inOnButton) {
         switch (inOnButton.tag) {
             case RADIO_BUTTON_1:
                 break;

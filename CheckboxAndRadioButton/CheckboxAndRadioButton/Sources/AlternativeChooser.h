@@ -21,8 +21,7 @@
 @interface AlternativeChooser : UIView
 @property (assign, nonatomic) NSInteger selectedButtonId;
 
-/// 初期化のため、使用前に必ず呼ぶこと
-- (void)setup:(void (^)(OnOffButton* inOnButton))cbChangedOnOffButton;
+- (void)setChangedOnOffButtonCallback:(void (^)(OnOffButton *inOnButton))onChangedOnOffButton;
 
 /// 選択ボタンの変更
 - (void)changeSelectedId:(NSInteger)inSelectedId;

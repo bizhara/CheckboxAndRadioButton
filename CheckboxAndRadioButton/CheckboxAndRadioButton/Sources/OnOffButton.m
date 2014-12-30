@@ -53,16 +53,13 @@
 
 #pragma mark - OnOffButton
 
-@interface OnOffButton ()
-@property (copy, nonatomic) void (^changedOnOffButton)(OnOffButton* inOnButton);
-
-@end
-
 @implementation OnOffButton
 
-- (void)setup:(void (^)(OnOffButton* inOnButton))cbChangedOnOffButton
+- (void)awakeFromNib
 {
-    self.changedOnOffButton = cbChangedOnOffButton;
+    [super awakeFromNib];
+    
+    NSAssert(self.onOffImage, @"onOffImage 必須");
     
     // このボタン全体として反応したいので、全体を囲むこのクラスに GestureRecognizer を付加する
     OnOffButtonGestureRecognizer* gestureRecognizer = [[OnOffButtonGestureRecognizer alloc] init];
@@ -99,7 +96,9 @@
     [self changeHighlightImage];
     
     // 選択状態に変化があったことを通知
-    if (self.changedOnOffButton) self.changedOnOffButton(self);
+    if (self.onChangedOnOffButton) {
+        self.onChangedOnOffButton(self);
+    }
 }
 
 - (void)changeHighlighted:(BOOL)inHighlighted

@@ -42,11 +42,11 @@
 
 @implementation AlternativeChooser
 
-- (void)setup:(void (^)(OnOffButton* inOnButton))cbChangedOnOffButton
+- (void)setChangedOnOffButtonCallback:(void (^)(OnOffButton *inOnButton))onChangedOnOffButton
 {
     for (UIView* subView in self.subviews) {
         if ([subView isKindOfClass:[AlternativeChooserItem class]]) {
-            [((AlternativeChooserItem*)subView) setup:cbChangedOnOffButton];
+            ((AlternativeChooserItem*)subView).onChangedOnOffButton = onChangedOnOffButton;
         }
     }
 }
