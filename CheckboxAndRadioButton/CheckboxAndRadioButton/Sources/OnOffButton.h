@@ -18,11 +18,12 @@
  *  ＊位置や大きさ・見かけは、nib などであらかじめ定義されていること
  */
 @interface OnOffButton : UIView
+@property (weak, nonatomic) IBOutlet UIButton* onOffImage;
+@property (weak, nonatomic) IBOutlet UILabel* onOffTitle;
+
 @property (assign, nonatomic) BOOL selected;
 @property (assign, nonatomic) BOOL enabled;
 @property (assign, nonatomic) BOOL highlighted;
-
-@property (weak, nonatomic) IBOutlet UILabel* onOffTitle;
 
 /// 初期化用に必ず呼ぶこと
 - (void)setup:(void (^)(OnOffButton* inOnButton))cbChangedOnOffButton;

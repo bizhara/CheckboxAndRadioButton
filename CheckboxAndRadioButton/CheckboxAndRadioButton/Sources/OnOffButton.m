@@ -54,8 +54,6 @@
 #pragma mark - OnOffButton
 
 @interface OnOffButton ()
-@property (weak, nonatomic) IBOutlet UIButton* onOffImage;
-
 @property (copy, nonatomic) void (^changedOnOffButton)(OnOffButton* inOnButton);
 
 @end
